@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import { 
     IconHome,
@@ -7,7 +7,7 @@ import {
     IconSend2,
     IconArticle,
     IconX,
-    IconGripHorizontal
+    IconLayoutDashboard
 } from '@tabler/icons-react';
 
 // add the navbar items here
@@ -36,24 +36,29 @@ const navItems = [
         name: 'Blog',
         icon: <IconArticle />,
         link: '/blog',
-    },
-   
+    }
 ]
 
 const Navbar = () => {
-    return (
-        <header className="header w-full fixed top-0 left-0">
-            <nav className="nav flex justify-between items-center gap-x-4 container">
-                <a href="index.html" className="nav__logo">
-                    Edmond
-                </a>
+    const [showNav, setShowNav] = useState(false);
 
-                <div className="nav__menu">
-                    <ul className="flex gap-x-8">
+    return (
+        <header className="header w-full fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md">
+            <nav className="nav flex justify-between items-center gap-x-4 container max-md:h-header">
+                <a href="index.html" className="nav__logo text-title-color">
+                    Edmond Li
+                </a>
+                <div className={`${showNav ? `bottom-0`: ``} nav__menu 
+                    max-md:fixed max-md:left-0 max-md:w-full max-md:bg-body-color 
+                    max-md:pt-6 max-md:pr-4 max-md:pb-10 max-md:rounded-3xl
+                    max-phone:pr-1
+                    `}>
+                    <ul className="nav__list flex gap-x-8 max-md:grid max-md:grid-cols-3 max-md:gap-y-6">
+                        {/* map through all the nav items with their list */}
                         {navItems.map((item, index) => (
-                                <li className="nav__item">
-                                    <a href={item.link} className="nav__link flex flex-col items-center">
-                                        <div className="nav__icon"> 
+                                <li className="nav__item ">
+                                    <a href={item.link} className="nav__link flex flex-col items-center hover:text-color-dark">
+                                        <div className="nav__icon max-md:block"> 
                                             {item.icon} 
                                         </div> 
                                         {item.name}
@@ -62,12 +67,16 @@ const Navbar = () => {
                             ))
                         }
                     </ul>
-                    <div className="nav__close">
+                    <div className="nav__close max-md:block max-md:absolute max-md:bottom-2 max-md:text-title-color"
+                        onClick={() => setShowNav(!showNav)}
+                    >
                         <IconX />
                     </div>
                 </div>
-                <div className="nav__toggle">
-                    <IconGripHorizontal />
+                <div className="nav__toggle text-title-color max-md:block hover:text-color-dark"
+                    onClick={() => setShowNav(!showNav)}
+                >
+                    <IconLayoutDashboard />
                 </div>
             </nav>
         </header>
