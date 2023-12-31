@@ -17,15 +17,29 @@
   transition: .3s;
 }
 
-.nav__logo,
-.nav__toggle {
-  color: var(--title-color);
-}
-
 .nav__icon, .nav__close, .nav__toggle {
   display: none;
 }
 
-.nav__link:hover {
-  color: var(--title-color-dark);
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .nav__menu {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    transition: .3s;
+    bottom: -100%;
+  }
+  .nav__close {
+    cursor: pointer;
+    font-size: 1.5rem;
+    right: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
