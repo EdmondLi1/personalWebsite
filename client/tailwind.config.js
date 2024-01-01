@@ -9,7 +9,7 @@ export default {
         'header': '3rem',
       },
       colors: {
-        'title-color': 'hsl(var(--hue), var(--sat), 20%)',
+        'title-color': 'hsl(var(--hue), var(--sat), 25%)',
         'title-color-dark': 'hsl(var(--hue), var(--sat), 0%)',
         'text-color': 'hsl(var(--hue), var(--sat), 46%)',
         'body-color': 'hsl(var(--hue), var(--sat), 98%)',
