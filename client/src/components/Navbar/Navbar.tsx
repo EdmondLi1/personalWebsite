@@ -43,7 +43,7 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false);
 
     return (
-        <header className="header w-full fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md">
+        <header className="header w-full fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md z-modal">
             <nav className="nav flex justify-between items-center gap-x-4 container max-md:h-header">
                 <a href="index.html" className="nav__logo text-title-color">
                     Edmond Li
@@ -56,8 +56,10 @@ const Navbar = () => {
                     <ul className="nav__list flex gap-x-8 max-md:grid max-md:grid-cols-3 max-md:gap-y-6">
                         {/* map through all the nav items with their list */}
                         {navItems.map((item, index) => (
-                                <li className="nav__item ">
-                                    <a href={item.link} className="nav__link flex flex-col items-center hover:text-color-dark">
+                                <li className="nav__item" key={index}>
+                                    <a href={item.link} className="nav__link 
+                                    text-title-color flex flex-col items-center font-medium
+                                    hover:text-title-color-dark hover:scale-105 transition-all">
                                         <div className="nav__icon max-md:block"> 
                                             {item.icon} 
                                         </div> 

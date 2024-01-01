@@ -12,11 +12,6 @@
   column-gap: 2rem;
 }
 
-.nac__link {
-  color: var(--title-color);
-  transition: .3s;
-}
-
 .nav__icon, .nav__close, .nav__toggle {
   display: none;
 }
