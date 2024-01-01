@@ -43,7 +43,7 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false);
 
     return (
-        <header className="header w-full fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md">
+        <header className="header w-full fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md z-modal">
             <nav className="nav flex justify-between items-center gap-x-4 container max-md:h-header">
                 <a href="index.html" className="nav__logo text-title-color">
                     Edmond Li

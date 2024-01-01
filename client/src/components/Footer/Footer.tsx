@@ -44,7 +44,7 @@ const footerSocials = [
 const Footer = () => {
   return (
     <footer className="footer w-full fixed bottom-0 left-0 max-md:top-auto max-md:bottom-0 shadow-xl bg-container-color">
-        <div className="footer__content pt-8 pb-16">
+        <div className="footer__content pt-8 pb-24">
             <h1 className="text-center text-title-color mb-6 text-3xl font-bold">
                 Edmond Li
             </h1>
@@ -72,7 +72,7 @@ const Footer = () => {
                 </a>
             ))}
             </div>
-            <span className="footer__copy block mt-16 text-center items-center text-sm">
+            <span className="footer__copy block mt-8 mb-24 text-center items-center text-sm">
                 © 2024 Edmond Li
             </span>
         </div>
