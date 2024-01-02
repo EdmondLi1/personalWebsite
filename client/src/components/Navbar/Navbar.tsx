@@ -43,9 +43,9 @@ const Navbar = () => {
     const [showNav, setShowNav] = useState(false);
 
     return (
-        <header className="header w-full fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md z-modal">
-            <nav className="nav flex justify-between items-center gap-x-4 container max-md:h-header">
-                <a href="index.html" className="nav__logo text-title-color">
+        <header className="header w-full bg-container-color fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md z-fixed">
+            <nav className="nav flex justify-between items-center gap-x-4 container max-md:h-header xl:px-12">
+                <a href="index.html" className="nav__logo text-title-color font-semibold text-xl">
                     Edmond Li
                 </a>
                 <div className={`${showNav ? `bottom-0`: ``} nav__menu 
@@ -58,8 +58,8 @@ const Navbar = () => {
                         {navItems.map((item, index) => (
                                 <li className="nav__item" key={index}>
                                     <a href={item.link} className="nav__link 
-                                    text-title-color flex flex-col items-center font-medium
-                                    hover:text-title-color-dark hover:scale-105 transition-all">
+                                    text-title-color flex flex-col items-center font-normal
+                                    hover:text-title-color-dark hover:scale-105 hover:font-medium transition-all">
                                         <div className="nav__icon max-md:block"> 
                                             {item.icon} 
                                         </div> 
