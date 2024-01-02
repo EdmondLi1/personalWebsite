@@ -1,8 +1,6 @@
-import React from 'react';
 import { Icon } from '@iconify/react';
 import HomeData from './HomeData';
 import './Home.css';
-import { IconMouse } from '@tabler/icons-react';
 
 // home socials
 const homeSocials = [

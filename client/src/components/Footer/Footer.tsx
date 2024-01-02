@@ -1,4 +1,3 @@
-import React from 'react';
 import "./footer.css";
 
 // add the footer items here
