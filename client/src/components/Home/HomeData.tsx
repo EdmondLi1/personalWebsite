@@ -15,7 +15,7 @@ const Data = () => {
       </h3>
       <a href="#contact">
         <Button
-          className="text-align inline-flex items-center justify-center text-sm font-semibold text-title-color hover:text-title-color-dark hover:scale-105 transition-all"
+          className="text-align inline-flex items-center justify-center text-base font-semibold text-title-color hover:text-title-color-dark hover:scale-105 transition-all"
           icon={<IconSend className="w-4"/>}
           size="large"
           shape="round"
