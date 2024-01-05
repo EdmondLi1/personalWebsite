@@ -18,9 +18,9 @@ const navItems = [
         link: '#home',
     },
     {
-        name: 'About',
-        icon: <IconUser />,
-        link: '#about',
+        name: 'Experience',
+        icon: <IconUser />,  // change icon
+        link: '#skill',
     },
     {
         name: 'Portfolio',
@@ -31,6 +31,11 @@ const navItems = [
         name: 'Contact',
         icon: <IconSend2 />,
         link: '#contact',
+    },
+    { 
+        name: 'Resume',
+        icon: <IconArticle />, // change icon
+        link: '/resume', // need this to redirec to the google drive or smth... 
     },
     {
         name: 'Blog',

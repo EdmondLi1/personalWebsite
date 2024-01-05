@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Navbar />
         {/* think of the home page as the ones with this... maybe make it a route */}
-        <main className='h-[100vh]'>
+        <main className='bg-body-color'>
           <Routes>
               {/* make a nav bar and maybe a side bar */}
               <Route path="/" element={<MainPage />} />

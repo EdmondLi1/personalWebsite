@@ -6,7 +6,7 @@ import './Home.css';
 const homeSocials = [
     {
       icon: <Icon icon="simple-icons:devpost" className="text-xl md:mb-1.5 text-title-color 
-      hover:text-title-color-dark hover:scale-105 transition-all" />,
+        hover:text-title-color-dark hover:scale-105 transition-all"/>,
       link: 'https://devpost.com/liedmond0527',
     },
     {
@@ -23,7 +23,7 @@ const homeSocials = [
 
 const Home = () => {
   return (
-    <section className="home section" id="home">
+    <section className="home section mt-20" id="home">
       <div className="home__container container grid">
         <div className="home__content max-md:flex max-md:flex-col md:flex items-center justify-center pt-22 gap-x-8">
             <div className="home__social grid gap-y-1 items-center max-md:flex max-md:flex-row max-md:justify-center">
@@ -42,6 +42,6 @@ const Home = () => {
         </div>
     </section>
   )
-}
+};
 
 export default Home;
