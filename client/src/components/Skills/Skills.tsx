@@ -44,7 +44,7 @@ const backEndSkills: Skill[] = [
     },
     {
         name: 'Java', 
-        proficiency: 60, 
+        proficiency: 70, 
         Icon: <i className="fa-brands fa-java"></i>,
     },
     {
@@ -67,7 +67,7 @@ const additionalSkills: Skill[] = [
     },
     {
         name: 'Docker',
-        proficiency: 20,
+        proficiency: 10,
         Icon: <i className="fa-brands fa-docker"></i>,
     },
     {

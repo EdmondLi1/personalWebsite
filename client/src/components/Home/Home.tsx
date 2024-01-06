@@ -23,7 +23,7 @@ const homeSocials = [
 
 const Home = () => {
   return (
-    <section className="home section mt-20" id="home">
+    <section className="home section" id="home">
       <div className="home__container container grid">
         <div className="home__content max-md:flex max-md:flex-col md:flex items-center justify-center pt-22 gap-x-8">
             <div className="home__social grid gap-y-1 items-center max-md:flex max-md:flex-row max-md:justify-center">
