@@ -3,12 +3,12 @@ import "./footer.css";
 // add the footer items here
 const footerItems = [
     {
-        name: 'About',
-        link: '#about',
+        name: 'Home',
+        link: '#home',
     },
     {
         name: 'Projects',
-        link: '#portfolio',
+        link: '#projects',
     },
     {
         name: 'Blog',

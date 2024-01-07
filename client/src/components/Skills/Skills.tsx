@@ -83,9 +83,9 @@ const Skills = () => {
         <h2 className="section__title text-2xl font-semibold"> Skills </h2>
         <span className="section__subtitle text-sm"> Techincal level</span>
         <div className="skills_container container grid justify-center gap-x-8">
-            <SkillsCard title="Front End" icon={<i className="fa-solid fa-code"></i>} skills={frontEndSkills} />
-            <SkillsCard title="Back End" icon={<i className="fa-solid fa-server"></i>} skills={backEndSkills} />
-            <SkillsCard title="Additional Skills" icon={<i className="fa-solid fa-sheet-plastic"></i>} skills={additionalSkills} />
+            <SkillsCard title="Front End" icon={<i className="fa-solid fa-code mr-2"></i>} skills={frontEndSkills} />
+            <SkillsCard title="Back End" icon={<i className="fa-solid fa-server mr-2"></i>} skills={backEndSkills} />
+            <SkillsCard title="Additional Skills" icon={<i className="fa-solid fa-sheet-plastic mr-2"></i>} skills={additionalSkills} />
         </div>
     </section>
   )
