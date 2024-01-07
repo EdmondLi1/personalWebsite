@@ -29,18 +29,25 @@ const workExperiences = [
 
 const extracurriculars = [
     { 
-        title: "Logistics and Programming Member", 
-        subtitle: "FRC 6135", 
+        title: "Senior Programming Member", 
+        subtitle: "", 
         asset: "",
-        description: "", 
+        description: "ADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HERE", 
         date: "Sept 2020 - Sept 2022" 
     },
     { 
-        title: "Club President", 
-        subtitle: "Robotics Club", 
+        title: "Logistics Organizer", 
+        subtitle: "Tech+", 
         asset: "",
-        description: "", 
-        date: "Sep 2020 - Jun 2021" 
+        description: "ADD STUFF HERE ADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HERE", 
+        date: "Jan 2023 - Present" 
+    },    
+    { 
+        title: "Codeybot Developer", 
+        subtitle: "UW CSC", 
+        asset: "",
+        description: "ADD STUFF HERE ADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HERE", 
+        date: "Jan 2023 - Present" 
     },
    
     // ... other extracurriculars
@@ -62,9 +69,9 @@ const Experience = () => {
             <span className="section__subtitle text-sm"> My personal journey</span>
 
             <div className="experience__container container">
-                <div className="experience__tabs flex space-x-4 justify-center mb-8">
+                <div className="experience__tabs flex justify-center md:space-x-4  mb-8">
                     <Button 
-                        className={`inline-flex items-center text-title-color hover:scale-105 ${activeTab === 'work' ? 'text-title-color-dark font-bold shadow-xl text-base' : ''}`}
+                        className={`experience__button max-md:text-xs inline-flex items-center text-title-color ${activeTab === 'work' ? 'text-title-color-dark font-semibold shadow-xl max-md:text-sm' : ''}`}
                         icon={<i className="fa-solid fa-briefcase"></i>}
                         shape="round"
                         onClick={() => handleTabChange('work')}
@@ -72,7 +79,7 @@ const Experience = () => {
                         Work Experience
                     </Button>
                     <Button 
-                        className={`inline-flex items-center text-title-color hover:scale-105 ${activeTab === 'extracurriculars' ? 'text-title-color-dark font-bold shadow-xl text-base' : ''}`} 
+                        className={`experience__button max-md:text-xs inline-flex items-center text-title-color ${activeTab === 'extracurriculars' ? 'text-title-color-dark font-semibold shadow-xl max-md:text-sm' : ''}`} 
                         icon={<i className="fa-solid fa-graduation-cap"></i>}
                         shape="round"
                         onClick={() => handleTabChange('extracurriculars')}
@@ -87,12 +94,12 @@ const Experience = () => {
                         <div className="experience__data grid gap-x-6" key={index}>
 
                             {/* this goes after if even */}
-                            { index % 2 === 0 && 
+                            { index % 2 === 0  && 
                                 <>
                                     <div></div>
                                     <div>
                                         <span className="experience__rounder inline-block w-[13px] h-[13px] bg-text-color rounded-xl"></span>
-                                        <span className="experience__line block w-[1px] h-[100%] bg-text-color"></span>
+                                        { index + 1 !== experiences.length && <span className="experience__line block w-[1px] h-[100%] bg-text-color"></span> }
                                     </div>
                                 </>
                             }
@@ -100,10 +107,10 @@ const Experience = () => {
                             <div className="flex flex-row items-start">
                                 {/* {index % 2 !== 0 && <img src={experience.asset} alt={experience.title} className="experience__img w-[60%]" />} */}
                                 <div className="flex flex-col">
-                                    <h3 className="experience__title text-lg font-semibold"> {experience.title} </h3>
-                                    <span className="experience__subtitle text-base font-medium mb-1"> {experience.subtitle} </span>
-                                    <span className="experience__date text-sm mb-3"> {experience.date}</span>
-                                    <span className="experience__description text-sm"> {experience.description} </span>
+                                    <h3 className="experience__title text-lg max-md:text-sm font-semibold text-title-color"> {experience.title} </h3>
+                                    <span className="experience__subtitle text-base max-md:text-xs font-medium mb-1 text-title-color"> {experience.subtitle} </span>
+                                    <span className="experience__date text-sm max-md:text-xs mb-3 text-text-color"> {experience.date}</span>
+                                    <span className="experience__description text-sm max-md:text-xs text-text-color"> {experience.description} </span>
                                 </div>
                                 {/* {index % 2 === 0 && <img src={experience.asset} alt={experience.title} className="experience__img w-[60%]" />} */}
                             </div>
@@ -112,13 +119,15 @@ const Experience = () => {
                             { index % 2 !== 0 &&
                                 <>
                                     <div>
-                                    <span className="experience__rounder inline-block w-[13px] h-[13px] bg-text-color rounded-xl"></span>
-                                    <span className="experience__line block w-[1px] h-[100%] bg-text-color"></span>
-                                    </div>
+                                        <span className="experience__rounder inline-block w-[13px] h-[13px] bg-text-color rounded-xl"></span>
+                                        { index + 1 !== experiences.length && <span className="experience__line block w-[1px] h-[100%] bg-text-color"></span> }
+                                    </div>                                    
                                 </>
                             }
                         </div>
+                        
                         ))}
+                        
                     </div>
                 </div>
 

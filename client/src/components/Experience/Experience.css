@@ -1,5 +1,12 @@
 .experience__container {
-    max-width: 968px !important;
+    max-width: 968px;
+}
+
+.experience__title, .experience__subtitle, .experience__date , .experience__description { 
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 .experience__sections {
@@ -12,4 +19,33 @@
 
 .experience__line {
     transform: translate(6px, -7px)
+}
+
+@media screen and (max-width: 992px) {
+  .experience__container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+    .experience__sections {
+        grid-template-columns: initial;
+    }
+
+    .experience__button {
+        margin: 0 0.75rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .experience__data {
+        gap: 0.5rem;
+    }
+
+    .experience__button {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
 }
