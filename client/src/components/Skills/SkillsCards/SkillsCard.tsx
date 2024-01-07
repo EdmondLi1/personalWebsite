@@ -27,15 +27,15 @@ const SkillsCard:  React.FC<SkillsCardProps> = ({title, icon, strokeColor, skill
     <div className="skills__content bg-container-color border px-8 py-14 rounded-xl text-center">
         <h3 className="skills_title font-semibold mb-6 text-center">{icon} {title}</h3>
         <div className="skills__box flex justify-center gap-x-10">
-            {splitArrayIntoChunks(skills, 2).map((chunk) => (
-                 <div className="skills__group grid gap-y-4 items-start">
-                 {chunk.map((item) => (
-                      <div className="skills__data flex gap-x-2 items-center ">
+            {splitArrayIntoChunks(skills, 2).map((chunk, index) => (
+                 <div className="skills__group grid gap-y-4 items-start" key={index}>
+                 {chunk.map((item, key) => (
+                      <div className="skills__data flex gap-x-2 items-center" key={key}>
                          <div>
                              <h3 className="skills__name inline-flex gap-x-2 font-medium items-center"> <div className='text-xl'>{item.Icon}</div> {item.name} </h3>
                              <span className="skills__level flex flex-col items-center">
                                 <Progress percent={item.proficiency} steps={5} showInfo={false} strokeColor={strokeColor || '#6b7280'} />
-                                <span className="progress-text">{5 * item.proficiency / 100} years</span>
+                                <span className="progress-text">{5 * item.proficiency / 100}{item.proficiency >= 100 ? "+" : ""} years</span>
                             </span>
                          </div>
                      </div>

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './Navbar.css';
 import { 
     IconHome,
-    IconUser,
+    IconList,
+    IconFolderCode,
     IconFileInvoice,
     IconSend2,
     IconArticle,
@@ -19,12 +20,12 @@ const navItems = [
     },
     {
         name: 'Experience',
-        icon: <IconUser />,  // change icon
-        link: '#skill',
+        icon: <IconList />,  // change icon
+        link: '#experience',
     },
     {
         name: 'Portfolio',
-        icon: <IconFileInvoice />,
+        icon: <IconFolderCode />,
         link: '#portfolio',
     },
     {
@@ -34,7 +35,7 @@ const navItems = [
     },
     { 
         name: 'Resume',
-        icon: <IconArticle />, // change icon
+        icon: <IconFileInvoice />, // change icon
         link: '/resume', // need this to redirec to the google drive or smth... 
     },
     {
@@ -50,7 +51,7 @@ const Navbar = () => {
     return (
         <header className="header w-full bg-container-color fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md z-fixed">
             <nav className="nav flex justify-between items-center gap-x-4 container max-md:h-header xl:px-12">
-                <a href="index.html" className="nav__logo text-title-color font-semibold text-xl">
+                <a href="/" className="nav__logo text-title-color font-semibold text-xl">
                     Edmond Li
                 </a>
                 <div className={`${showNav ? `bottom-0`: ``} nav__menu 

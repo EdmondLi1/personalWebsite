@@ -25,7 +25,8 @@ img {
 
 /* UTILITIES */
 .section {
-  padding: 3rem 0 3rem;
+  padding: 6rem 0 3rem;
+  margin: auto;
 }
 
 .section__title {

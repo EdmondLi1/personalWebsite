@@ -19,12 +19,16 @@
     }
 
     .skills_content {
-        padding: 1.5rem;
+        padding: 5rem 1rem; 
     }
 }
 
 @media screen and (max-width: 350px) {
     .skills_box {
         column-gap: 1.25rem;
+    }
+
+    .skills_content {
+        margin: 0 1rem; 
     }
 }
