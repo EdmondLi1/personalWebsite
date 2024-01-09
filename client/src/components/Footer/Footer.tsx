@@ -1,4 +1,4 @@
-import "./footer.css";
+import "./Footer.css";
 
 // add the footer items here
 const footerItems = [
