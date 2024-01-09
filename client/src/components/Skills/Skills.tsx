@@ -6,7 +6,7 @@ interface Skill {
     name: string;
     proficiency: number;
     Icon: JSX.Element;
-};
+}
 
 const frontEndSkills: Skill[] = [
     {
