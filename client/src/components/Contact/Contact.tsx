@@ -88,7 +88,7 @@ const Contact = () => {
                         layout="vertical"
                         onFinish={onFinish}
                         onFinishFailed={onFinishFailed}
-                        onValuesChange={(changedValues: Partial<FormValues>, allValues: FormValues) => {
+                        onValuesChange={(changedValues: Partial<FormValues> ) => {
                             // Use the spread operator to create a new object
                             // This is a shallow copy, so it's safe for setState
                             const updatedFormValues = { ...formValues, ...changedValues };
