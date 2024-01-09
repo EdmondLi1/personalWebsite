@@ -14,8 +14,8 @@ const ContactCard: React.FC<ContactCardProps> = ({title, icon, data, link}) => {
   return (
     <div className="contact__card">
         {icon}
-        <h3 className="contact__card-title">{title}</h3>
-        <span className="contact__card-data">{data}</span>
+        <h3 className="contact__card-title font-semibold">{title}</h3>
+        <span className="contact__card-data text-sm">{data}</span>
         <Button
             className="contact__buton inline-flex items-center justify-center font-semibold"
             size="middle"
