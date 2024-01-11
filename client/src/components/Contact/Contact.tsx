@@ -9,8 +9,8 @@ const contactData = [
     {
         title: 'Email',
         icon: <i className="fas fa-envelope text-2xl mb-1"></i>,
-        data: 'edmondli0527@gmail.com',
-        link: 'mailto:edmondli0527@gmail.com'
+        data: 'liedmond0527@gmail.com',
+        link: 'mailto:liedmond0527@gmail.com'
     },
     {
         title: 'Phone',
