@@ -131,7 +131,7 @@ const Contact = () => {
     return (
         <section className="contact section" id="contact">
             <h2 className="section__title text-2xl font-semibold">Contact Me</h2>
-            <span className="section__subtitle text-sm">Info and Email</span>
+            <span className="section__subtitle text-sm">Contact Information :)</span>
 
             <div className="contact__container container grid justify-center gap-x-24 mb-12">
                 <div className="contact__content">
