@@ -105,33 +105,10 @@ const Contact = () => {
         console.log('Failed:', errorInfo);
     };
 
-    // const sendEmail = () => {
-    //     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    //     const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    //     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    //     console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
-    //     console.log(formRef?.current)
-
-    //     if (formRef?.current) {
-    //         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef?.current, PUBLIC_KEY)
-    //             .then((result) => {
-    //                 console.log(result.text);
-    //                 message.success('Email sent successfully!');
-    //                 form.resetFields();
-    //             }, (error) => {
-    //                 console.log(error.text);
-    //                 message.error('Email failed to send :(');
-    //             });
-    //     } else {
-    //         message.error('Email failed to send :(');
-    //     }
-    // }
-
     return (
         <section className="contact section" id="contact">
             <h2 className="section__title text-2xl font-semibold">Contact Me</h2>
-            <span className="section__subtitle text-sm">Info and Email</span>
+            <span className="section__subtitle text-sm">Contact Information :)</span>
 
             <div className="contact__container container grid justify-center gap-x-24 mb-12">
                 <div className="contact__content">

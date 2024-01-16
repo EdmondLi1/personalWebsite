@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { 
     IconHome,
@@ -16,7 +17,7 @@ const navItems = [
     {
         name: 'Home',
         icon: <IconHome />,
-        link: '#home',
+        link: '/#home',
     },
     {
         name: 'Experience',
@@ -47,6 +48,9 @@ const navItems = [
 
 const Navbar = () => {
     const [showNav, setShowNav] = useState(false);
+    const location = useLocation();
+
+    const restrictedPathItems = location.pathname === '/' ? navItems : navItems.filter(item => item.link.includes('/'));
 
     return (
         <header className="header w-full bg-container-color fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md z-fixed">
@@ -61,7 +65,7 @@ const Navbar = () => {
                     `}>
                     <ul className="nav__list flex gap-x-8 max-md:grid max-md:grid-cols-3 max-md:gap-y-6">
                         {/* map through all the nav items with their list */}
-                        {navItems.map((item, index) => (
+                        {restrictedPathItems.map((item, index) => (
                                 <li className="nav__item" key={index}>
                                     <a href={item.link} className="nav__link 
                                     text-title-color flex flex-col items-center font-normal
