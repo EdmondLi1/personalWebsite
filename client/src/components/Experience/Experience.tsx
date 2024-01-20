@@ -50,10 +50,10 @@ const extracurriculars = [
         date: "Jan 2023 - Present" 
     },
     { 
-        title: "FirmWare Developer", 
+        title: "Firmware Developer", 
         subtitle: "Waterloop", 
         asset: "",
-        description: "Maintaining CSC's personal discord bot with over 3000+ users.", 
+        description: "", 
         date: "Jan 2023 - Present" 
     },
    
