@@ -7,7 +7,7 @@ const workExperiences = [
         title: "Software Engineer", 
         subtitle: "Chatsimple", 
         asset: "",
-        description: "Integrated with messenging plaforms such as Whatsapp, Messenger, and Instagram. Enchanced UI/UX with smoother pages and increased MMR by 4 times.",
+        description: "Integrated with messenging plaforms such as Whatsapp, Messenger, and Instagram. Created a fullstack white-label automation system for small-medium business clients and increased MMR by 4 times.",
         date: "Sept 2023 - Dec 2023" 
     },
     { 
@@ -17,36 +17,43 @@ const workExperiences = [
         description: "Tutored over 100+ students in various subjects such as Math, Physics, and Computer Science.",
         date: "May 2020 - Present" 
     },
-    { 
-        title: "Software Engineer", 
-        subtitle: "Chatsimple", 
-        asset: "",
-        description: "Integrated with messenging plaforms such as Whatsapp, Messenger, and Instagram. Enchanced UI/UX with smoother pages and increased MMR by 4 times.",
-        date: "Sept 2023 - Dec 2023" 
-    },
+    // { 
+        // title: "Software Engineer", 
+        // subtitle: "Chatsimple", 
+        // asset: "",
+        // description: "Integrated with messenging plaforms such as Whatsapp, Messenger, and Instagram. Enchanced UI/UX with smoother pages and increased MMR by 4 times.",
+        // date: "Sept 2023 - Dec 2023" 
+    // },
     // ... other work experiences
 ];
 
 const extracurriculars = [
     { 
         title: "Senior Programming Member", 
-        subtitle: "", 
+        subtitle: "FRC Arctos 6135" , 
         asset: "",
-        description: "ADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HERE", 
+        description: "Developed an autonomous pathfinding algorithm and a grabber mechanism for the robot.", 
         date: "Sept 2020 - Sept 2022" 
     },
     { 
         title: "Logistics Organizer", 
         subtitle: "Tech+", 
         asset: "",
-        description: "ADD STUFF HERE ADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HERE", 
+        description: "Promoting in DEI in the tech industry and making tech accessible to everyone :). Aided end-to-end with internal organization and communication to deliver large scale events smooth", 
         date: "Jan 2023 - Present" 
     },    
     { 
-        title: "Codeybot Developer", 
+        title: "Server Developer", 
         subtitle: "UW CSC", 
         asset: "",
-        description: "ADD STUFF HERE ADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HEREADD STUFF HERE", 
+        description: "Maintaining CSC's personal discord bot with over 3000+ users.", 
+        date: "Jan 2023 - Present" 
+    },
+    { 
+        title: "FirmWare Developer", 
+        subtitle: "Waterloop", 
+        asset: "",
+        description: "Maintaining CSC's personal discord bot with over 3000+ users.", 
         date: "Jan 2023 - Present" 
     },
    
