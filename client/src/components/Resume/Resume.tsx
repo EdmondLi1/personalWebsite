@@ -1,13 +1,13 @@
 const Resume = () => {
   return (
-    <section className="resume section p-0 pt-24 pb-4">
-      <div className="resume__container container grid ">
-        <div className="resume__content items-center justify-center flex flex-col m-0 p-0">
-            {/* <h3 className="resume__title text-center font-semibold mb-6 text-3xl"> Resume </h3> */}
+    <section className="resume section p-0 pb-4 pt-24">
+      <div className="resume__container container grid">
+        <div className="resume__content m-0 flex flex-col items-center justify-center p-0">
+            {/* <h3 className="resume__title mb-6 text-center text-3xl font-semibold"> Resume </h3> */}
             <iframe
-                src={'./__Edmond_Li_2B_Resume_External.pdf'}
+                src={'./Edmond_Li_Resume.pdf'}
                 frameBorder="0" 
-                className="items-centerjustify-center flex md:w-[60%] md:h-[135vh] w-[100%] h-[100vh] rounded-xl bordered shadow-xl"
+                className="items-centerjustify-center bordered flex h-[100vh] w-[100%] rounded-xl shadow-xl md:h-[135vh] md:w-[60%]"
                 title="Resume"
             >
             </iframe>
