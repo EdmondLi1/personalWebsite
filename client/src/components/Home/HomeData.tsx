@@ -4,18 +4,18 @@ import { IconSend } from '@tabler/icons-react';
 const Data = () => {
   return (
     <div className="home__data">
-      <h1 className="home__greeting text-title-color font-bold text-5xl max-md:text-4xl mb-3"> 
-        Welcome! :D 
+      <h1 className="home__greeting mb-3 text-5xl font-bold text-title-color max-md:text-4xl"> 
+        Welcome 😄 
       </h1>
-      <h1 className="home__title text-title-color font-semibold text-4xl max-md:text-2xl mb-5"> 
-       Edmond Li
+      <h1 className="home__title mb-5 text-4xl font-semibold text-title-color max-md:text-2xl"> 
+       I'm Edmond Li!
       </h1>
-      <h3 className="home__subtitle text-subtitle-color font-normal text-sm mb-5 relative">
+      <h3 className="home__subtitle text-subtitle-color relative mb-5 text-sm font-normal">
           CS @ University of Waterloo (AI and Digital Hardware Specilization, Pure Mathematics Minor)
       </h3>
       <a href="#contact">
         <Button
-          className="text-align inline-flex items-center justify-center text-base font-semibold text-title-color hover:text-title-color-dark hover:scale-105 transition-all"
+          className="text-align inline-flex items-center justify-center text-base font-semibold text-title-color transition-all hover:scale-105 hover:text-title-color-dark"
           icon={<IconSend className="w-4"/>}
           size="large"
           shape="round"

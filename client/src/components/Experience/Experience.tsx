@@ -5,58 +5,71 @@ import './Experience.css';
 const workExperiences = [
     { 
         title: "Software Engineer", 
+        subtitle: "Gyrd", 
+        asset: "",
+        description: "Fullscale migration, leading to 400% reduction in OER, implemented  CNN network to santized data and categorize leading to 500% faster onboarding workflow",
+        date: "May 2024 - Present" 
+    },
+    { 
+        title: "Software Engineer", 
         subtitle: "Chatsimple", 
         asset: "",
-        description: "Integrated with messenging plaforms such as Whatsapp, Messenger, and Instagram. Created a fullstack white-label automation system for small-medium business clients and increased MMR by 4 times.",
-        date: "Sept 2023 - Dec 2023" 
+        description: "Integrated with Metamessenging plaforms and lead the creation of a fullstack white-label automation system for SMB increased MMR by x4",
+        date: "Sep 2023 - Dec 2023" 
     },
     { 
         title: "Private Tutor", 
-        subtitle: "Tutorax, Universiy Tutoring Services, ...", 
+        subtitle: "Tutorax & Universiy Tutoring Services", 
         asset: "",
-        description: "Tutored over 100+ students in various subjects such as Math, Physics, and Computer Science.",
-        date: "May 2020 - Present" 
+        description: "Enhanced communication abilities through clear, concise explanations of topics on Calculus, Linear Algebra, and Statistics",
+        date: "May 2020 - Apr 2024" 
     },
-    // { 
-        // title: "Software Engineer", 
-        // subtitle: "Chatsimple", 
-        // asset: "",
-        // description: "Integrated with messenging plaforms such as Whatsapp, Messenger, and Instagram. Enchanced UI/UX with smoother pages and increased MMR by 4 times.",
-        // date: "Sept 2023 - Dec 2023" 
-    // },
     // ... other work experiences
 ];
 
 const extracurriculars = [
     { 
-        title: "Senior Programming Member", 
-        subtitle: "FRC Arctos 6135" , 
+        title: "Pink Tie - Orientation Leader", 
+        subtitle: "University of Waterloo - Faculty of Mathematics", 
         asset: "",
-        description: "Developed an autonomous pathfinding algorithm and a grabber mechanism for the robot.", 
-        date: "Sept 2020 - Sept 2022" 
+        description: "", 
+        date: "Jun 2024 - Present" 
     },
     { 
-        title: "Logistics Organizer", 
+        title: "GDSC Events & Internal Affairs", 
+        subtitle: "UW CSC", 
+        asset: "",
+        description: "Spearheaded panels with tech leaders and hosting the biggest anticipated event with 300+ members", 
+        date: "Jan 2024 - Present" 
+    },
+    { 
+        title: "Fullstack Developer", 
         subtitle: "Tech+", 
         asset: "",
-        description: "Promoting in DEI in the tech industry and making tech accessible to everyone :). Aided end-to-end with internal organization and communication to deliver large scale events smooth", 
+        description: "Established a mentorship portal app, promoting DEI and connecting underrepresented communities towards a tech career", 
         date: "Jan 2023 - Present" 
-    },    
+    },
     { 
         title: "Server Developer", 
         subtitle: "UW CSC", 
         asset: "",
-        description: "Maintaining CSC's personal discord bot with over 3000+ users.", 
-        date: "Jan 2023 - Present" 
+        description: "Maintaining CSC's personal discord bot with over 2000+ users", 
+        date: "Jan 2024 - Present" 
     },
     { 
-        title: "Firmware Developer", 
-        subtitle: "Waterloop", 
+        title: "Events and Logistics Organizer", 
+        subtitle: "Tech+", 
         asset: "",
-        description: "", 
-        date: "Jan 2023 - Present" 
+        description: "Promoting in DEI in the tech industry and making tech accessible to everyone :). Aided end-to-end with internal organization and communication to deliver large scale events smooth", 
+        date: "Jan 2024 - May 2024" 
+    },    
+    { 
+        title: "Senior Programming Member", 
+        subtitle: "FRC Arctos 6135" , 
+        asset: "",
+        description: "Developed an autonomous pathfinding algorithm and a grabber mechanism for the robot", 
+        date: "Sep 2020 - Sep 2022" 
     },
-   
     // ... other extracurriculars
 ];
 
@@ -76,7 +89,7 @@ const Experience = () => {
             <span className="section__subtitle text-sm"> My personal journey</span>
 
             <div className="experience__container container">
-                <div className="experience__tabs flex justify-center md:space-x-4  mb-8">
+                <div className="experience__tabs mb-8 flex justify-center md:space-x-4">
                     <Button 
                         className={`experience__button max-md:text-xs inline-flex items-center text-title-color ${activeTab === 'work' ? 'text-title-color-dark font-semibold shadow-xl max-md:text-sm' : ''}`}
                         icon={<i className="fa-solid fa-briefcase"></i>}
@@ -105,8 +118,8 @@ const Experience = () => {
                                 <>
                                     <div></div>
                                     <div>
-                                        <span className="experience__rounder inline-block w-[13px] h-[13px] bg-text-color rounded-xl"></span>
-                                        { index + 1 !== experiences.length && <span className="experience__line block w-[1px] h-[100%] bg-text-color"></span> }
+                                        <span className="experience__rounder inline-block h-[13px] w-[13px] rounded-xl bg-text-color"></span>
+                                        { index + 1 !== experiences.length && <span className="experience__line block h-[100%] w-[1px] bg-text-color"></span> }
                                     </div>
                                 </>
                             }
@@ -114,10 +127,10 @@ const Experience = () => {
                             <div className="flex flex-row items-start">
                                 {/* {index % 2 !== 0 && <img src={experience.asset} alt={experience.title} className="experience__img w-[60%]" />} */}
                                 <div className="flex flex-col">
-                                    <h3 className="experience__title text-lg max-md:text-sm font-semibold text-title-color"> {experience.title} </h3>
-                                    <span className="experience__subtitle text-base max-md:text-xs font-medium mb-1 text-title-color"> {experience.subtitle} </span>
-                                    <span className="experience__date text-sm max-md:text-xs mb-3 text-text-color"> {experience.date}</span>
-                                    <span className="experience__description text-sm max-md:text-xs text-text-color"> {experience.description} </span>
+                                    <h3 className="experience__title text-lg font-semibold text-title-color max-md:text-sm"> {experience.title} </h3>
+                                    <span className="experience__subtitle mb-1 text-base font-medium text-title-color max-md:text-xs"> {experience.subtitle} </span>
+                                    <span className="experience__date mb-3 text-sm text-text-color max-md:text-xs"> {experience.date}</span>
+                                    <span className="experience__description text-sm text-text-color max-md:text-xs"> {experience.description} </span>
                                 </div>
                                 {/* {index % 2 === 0 && <img src={experience.asset} alt={experience.title} className="experience__img w-[60%]" />} */}
                             </div>
@@ -126,8 +139,8 @@ const Experience = () => {
                             { index % 2 !== 0 &&
                                 <>
                                     <div>
-                                        <span className="experience__rounder inline-block w-[13px] h-[13px] bg-text-color rounded-xl"></span>
-                                        { index + 1 !== experiences.length && <span className="experience__line block w-[1px] h-[100%] bg-text-color"></span> }
+                                        <span className="experience__rounder inline-block h-[13px] w-[13px] rounded-xl bg-text-color"></span>
+                                        { index + 1 !== experiences.length && <span className="experience__line block h-[100%] w-[1px] bg-text-color"></span> }
                                     </div>                                    
                                 </>
                             }

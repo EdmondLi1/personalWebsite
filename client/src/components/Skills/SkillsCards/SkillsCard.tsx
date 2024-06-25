@@ -5,46 +5,54 @@ interface Skill {
     name: string;
     proficiency: number;
     Icon: JSX.Element;
-};
+}
 
 interface SkillsCardProps {
     title: string;
     icon?: JSX.Element;
     strokeColor?: string;
     skills: Skill[];
-};
+}
 
-const splitArrayIntoChunks = (array : Skill[], chunkSize: number) => {
-    const chunks = [];
-    for (let i = 0; i < array.length; i += chunkSize) {
-        chunks.push(array.slice(i, i + chunkSize));
-    }
-    return chunks;
-};
+const SkillsCard: React.FC<SkillsCardProps> = ({ title, icon, strokeColor, skills }) => {
+  const isOdd = skills.length % 2 !== 0;
+  const lastItemClass = isOdd ? "col-span-2 justify-self-center" : "";
 
-const SkillsCard:  React.FC<SkillsCardProps> = ({title, icon, strokeColor, skills}) => {
   return (
-    <div className="skills__content bg-container-color border px-8 py-14 rounded-xl text-center">
-        <h3 className="skills_title font-semibold mb-6 text-center">{icon} {title}</h3>
-        <div className="skills__box flex justify-center gap-x-10">
-            {splitArrayIntoChunks(skills, 2).map((chunk, index) => (
-                 <div className="skills__group grid gap-y-4 items-start" key={index}>
-                 {chunk.map((item, key) => (
-                      <div className="skills__data flex gap-x-2 items-center" key={key}>
-                         <div>
-                             <h3 className="skills__name inline-flex gap-x-2 font-medium items-center"> <div className='text-xl'>{item.Icon}</div> {item.name} </h3>
-                             <span className="skills__level flex flex-col items-center">
-                                <Progress percent={item.proficiency} steps={5} showInfo={false} strokeColor={strokeColor || '#6b7280'} />
-                                <span className="progress-text">{5 * item.proficiency / 100}{item.proficiency >= 100 ? "+" : ""} years</span>
-                            </span>
-                         </div>
-                     </div>
-                 ))}
-             </div>
-            ))}
-        </div>
+    <div className="skills__content m-0 rounded-lg border border-gray-300 bg-white px-1 py-4 text-center">
+      <div className="skills_title mb-4 flex items-center justify-center gap-x-1 text-lg font-semibold">
+        {icon && <div className="text-xl">{icon}</div>}
+        <span className="truncate">{title}</span>
+      </div>
+      <div className="skills__box grid grid-cols-2 justify-items-center gap-4">
+        {skills.map((item, index) => (
+          <div
+            className={`skills__data flex flex-col gap-y-1 items-center text-center ${isOdd && index === skills.length - 1 ? lastItemClass : ""}`}
+            key={index}
+          >
+            <div className="skills__name flex flex-col items-center gap-y-1 font-medium">
+              <div className="text-xl">{item.Icon}</div>
+              <span className="truncate">{item.name}</span>
+            </div>
+            <div className="skills__level flex w-full flex-col items-center">
+              <div className="w-full max-w-[100px]">
+                <Progress 
+                  percent={item.proficiency} 
+                  steps={5} 
+                  showInfo={false} 
+                  strokeColor={strokeColor || '#6b7280'} 
+                  className="w-full"
+                />
+              </div>
+              <span className="progress-text mt-1 text-sm">
+                {5 * item.proficiency / 100}{item.proficiency >= 100 ? "+" : ""} years
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 };
 
 export default SkillsCard;
