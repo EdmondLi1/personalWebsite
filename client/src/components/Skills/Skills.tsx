@@ -1,11 +1,8 @@
-import { SiLatex, SiDotnet, SiPytorch, SiAzuredevops } from "react-icons/si";
+import { SiDotnet, SiPytorch, SiAzuredevops } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
 import { DiMsqlServer } from "react-icons/di";
-
-
 import { TbBrandRedux } from "react-icons/tb";
-
 import './Skills.css';
 import SkillsCard from './SkillsCards/SkillsCard';
 
