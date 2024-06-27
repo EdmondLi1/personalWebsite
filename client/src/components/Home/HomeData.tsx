@@ -11,7 +11,7 @@ const Data = () => {
        I'm Edmond Li!
       </h1>
       <h3 className="home__subtitle text-subtitle-color relative mb-5 text-sm font-normal">
-          CS @ University of Waterloo (AI and Digital Hardware Specilization, Pure Mathematics Minor)
+        CS @ University of Waterloo (AI and Digital Hardware Specialization, Pure Mathematics Minor      
       </h3>
       <a href="#contact">
         <Button

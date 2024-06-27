@@ -4,19 +4,20 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import MainPage from './pages/MainPage/MainPage';
 import Resume from './components/Resume/Resume';
+import BlogPage from './pages/Blog/BlogPage';
+import BlogDetail from './pages/Blog/BlogDetail';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        {/* think of the home page as the ones with this... maybe make it a route */}
         <main className='bg-body-color'>
           <Routes>
-              {/* make a nav bar and maybe a side bar */}
-              <Route path="/" element={<MainPage />} />
-              <Route path="/resume" element={<Resume />} />
-              {/* <Route path="/blog" element={Blog} /> */}
+            <Route path="/" element={<MainPage />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:title" element={<BlogDetail />} />
           </Routes> 
         </main>
         <Footer />

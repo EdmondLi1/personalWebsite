@@ -91,6 +91,7 @@ const Experience = () => {
             <div className="experience__container container">
                 <div className="experience__tabs mb-8 flex justify-center md:space-x-4">
                     <Button 
+                        size='large'
                         className={`experience__button max-md:text-xs inline-flex items-center text-title-color ${activeTab === 'work' ? 'text-title-color-dark font-semibold shadow-xl max-md:text-sm' : ''}`}
                         icon={<i className="fa-solid fa-briefcase"></i>}
                         shape="round"
@@ -99,6 +100,7 @@ const Experience = () => {
                         Work Experience
                     </Button>
                     <Button 
+                        size='large'
                         className={`experience__button max-md:text-xs inline-flex items-center text-title-color ${activeTab === 'extracurriculars' ? 'text-title-color-dark font-semibold shadow-xl max-md:text-sm' : ''}`} 
                         icon={<i className="fa-solid fa-graduation-cap"></i>}
                         shape="round"
