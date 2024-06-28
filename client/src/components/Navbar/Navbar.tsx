@@ -4,7 +4,7 @@ import './Navbar.css';
 import { 
     IconHome,
     IconList,
-    IconFolderCode,
+    // IconFolderCode,
     IconFileInvoice,
     IconSend2,
     IconArticle,
@@ -24,11 +24,11 @@ const navItems = [
         icon: <IconList />,  // change icon
         link: '#experience',
     },
-    {
-        name: 'Portfolio',
-        icon: <IconFolderCode />,
-        link: '#portfolio',
-    },
+    // {
+    //     name: 'Portfolio',
+    //     icon: <IconFolderCode />,
+    //     link: '#portfolio',
+    // },
     {
         name: 'Contact',
         icon: <IconSend2 />,
@@ -53,9 +53,9 @@ const Navbar = () => {
     const restrictedPathItems = location.pathname === '/' ? navItems : navItems.filter(item => item.link.includes('/'));
 
     return (
-        <header className="header w-full bg-container-color fixed top-0 left-0 max-md:top-auto max-md:bottom-0 shadow-md z-fixed">
-            <nav className="nav flex justify-between items-center gap-x-4 container max-md:h-header xl:px-12">
-                <a href="/" className="nav__logo text-title-color font-semibold text-xl">
+        <header className="header fixed left-0 top-0 z-fixed w-full bg-container-color shadow-md max-md:bottom-0 max-md:top-auto">
+            <nav className="nav container flex items-center justify-between gap-x-4 xl:px-12 max-md:h-header">
+                <a href="/" className="nav__logo text-xl font-semibold text-title-color hover:scale-105">
                     Edmond Li
                 </a>
                 <div className={`${showNav ? `bottom-0`: ``} nav__menu 
@@ -67,9 +67,7 @@ const Navbar = () => {
                         {/* map through all the nav items with their list */}
                         {restrictedPathItems.map((item, index) => (
                                 <li className="nav__item" key={index}>
-                                    <a href={item.link} className="nav__link 
-                                    text-title-color flex flex-col items-center font-normal
-                                    hover:text-title-color-dark hover:scale-105 hover:font-medium transition-all">
+                                    <a href={item.link} className="nav__link flex flex-col items-center font-normal text-title-color transition-all hover:scale-110 hover:font-medium hover:text-title-color-dark">
                                         <div className="nav__icon max-md:block"> 
                                             {item.icon} 
                                         </div> 
@@ -79,13 +77,13 @@ const Navbar = () => {
                             ))
                         }
                     </ul>
-                    <div className="nav__close max-md:block max-md:absolute max-md:bottom-2 max-md:text-title-color"
+                    <div className="nav__close max-md:absolute max-md:bottom-2 max-md:block max-md:text-title-color"
                         onClick={() => setShowNav(!showNav)}
                     >
                         <IconX />
                     </div>
                 </div>
-                <div className="nav__toggle text-title-color max-md:block hover:text-color-dark"
+                <div className="nav__toggle hover:text-color-dark text-title-color max-md:block"
                     onClick={() => setShowNav(!showNav)}
                 >
                     <IconLayoutDashboard />

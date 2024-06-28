@@ -31,13 +31,14 @@ const extracurriculars = [
     { 
         title: "Pink Tie - Orientation Leader", 
         subtitle: "University of Waterloo - Faculty of Mathematics", 
+        // asset: "../../../public/extracurriculars/MATH_ORIENTATION.png",
         asset: "",
         description: "", 
         date: "Jun 2024 - Present" 
     },
     { 
-        title: "GDSC Events & Internal Affairs", 
-        subtitle: "UW CSC", 
+        title: "VP Events & Internal Affairs", 
+        subtitle: "UW Google Developer Student Club", 
         asset: "",
         description: "Spearheaded panels with tech leaders and hosting the biggest anticipated event with 300+ members", 
         date: "Jan 2024 - Present" 
@@ -91,6 +92,7 @@ const Experience = () => {
             <div className="experience__container container">
                 <div className="experience__tabs mb-8 flex justify-center md:space-x-4">
                     <Button 
+                        size='large'
                         className={`experience__button max-md:text-xs inline-flex items-center text-title-color ${activeTab === 'work' ? 'text-title-color-dark font-semibold shadow-xl max-md:text-sm' : ''}`}
                         icon={<i className="fa-solid fa-briefcase"></i>}
                         shape="round"
@@ -99,6 +101,7 @@ const Experience = () => {
                         Work Experience
                     </Button>
                     <Button 
+                        size='large'
                         className={`experience__button max-md:text-xs inline-flex items-center text-title-color ${activeTab === 'extracurriculars' ? 'text-title-color-dark font-semibold shadow-xl max-md:text-sm' : ''}`} 
                         icon={<i className="fa-solid fa-graduation-cap"></i>}
                         shape="round"
@@ -125,14 +128,16 @@ const Experience = () => {
                             }
 
                             <div className="flex flex-row items-start">
-                                {/* {index % 2 !== 0 && <img src={experience.asset} alt={experience.title} className="experience__img w-[60%]" />} */}
-                                <div className="flex flex-col">
+                            {index % 2 !== 0 && experience.asset && <img src={experience.asset} alt={experience.title} className="experience__img" />}
+
+                            <div className="flex flex-col">
                                     <h3 className="experience__title text-lg font-semibold text-title-color max-md:text-sm"> {experience.title} </h3>
                                     <span className="experience__subtitle mb-1 text-base font-medium text-title-color max-md:text-xs"> {experience.subtitle} </span>
                                     <span className="experience__date mb-3 text-sm text-text-color max-md:text-xs"> {experience.date}</span>
                                     <span className="experience__description text-sm text-text-color max-md:text-xs"> {experience.description} </span>
                                 </div>
-                                {/* {index % 2 === 0 && <img src={experience.asset} alt={experience.title} className="experience__img w-[60%]" />} */}
+                                {index % 2 === 0 && experience.asset && <img src={experience.asset} alt={experience.title} className="experience__img h-16 w-16 rounded-s-lg" />}
+
                             </div>
 
                             {/* this goes after if odd */}
