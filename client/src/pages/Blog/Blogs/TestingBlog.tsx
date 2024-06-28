@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Testing Blog',
+  title: 'TestingBlog',
   author: 'Edmond Li',
   date: 'June 27 2024',
   image: 'https://via.placeholder.com/300',
