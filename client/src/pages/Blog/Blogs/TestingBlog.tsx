@@ -1,9 +1,9 @@
 export const metadata = {
-  title: 'Blog1',
-  author: 'Jane Doe',
-  date: '10 Apr 2024',
+  title: 'Testing Blog',
+  author: 'Edmond Li',
+  date: 'June 27 2024',
   image: 'https://via.placeholder.com/300',
-  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.'
+  content: 'This little blog is act as a test to see if I can actually design this webpage so its scable and easy to use. I hope this works out well!'
 };
 
 const Blog1: React.FC = () => (

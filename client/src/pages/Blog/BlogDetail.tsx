@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 const BlogDetail: React.FC = () => {
   const location = useLocation();
-  const { title, author, date, image } = location.state as { title: string, author: string, date: string, image: string };
+  const { title, author, date } = location.state as { title: string, author: string, date: string };
 
   const [BlogComponent, setBlogComponent] = React.useState<React.ComponentType | null>(null);
 

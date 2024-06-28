@@ -21,11 +21,24 @@
     transform: translate(6px, -7px)
 }
 
+.experience__img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 992px) {
   .experience__container {
     margin-left: auto;
     margin-right: auto;
   }
+  .experience__img {
+    display: none;
+    }
 }
 
 @media screen and (max-width: 576px) {

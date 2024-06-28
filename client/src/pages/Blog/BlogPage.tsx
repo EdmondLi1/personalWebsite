@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlogPreview from '../../components/Blog/BlogPreview';
 import SearchBar from '../../components/Blog/SearchBar';
-import { Blog, BlogModule, BlogWithComponent } from '../../components/Blog/BlogTypes';
+import { BlogModule, BlogWithComponent } from '../../components/Blog/BlogTypes';
 import './BlogPage.css';
 
 const loadBlogs = async (): Promise<BlogWithComponent[]> => {
@@ -42,8 +42,8 @@ const BlogPage: React.FC = () => {
     };
 
     return (
-        <section className="blogpage section" id="blogpage">
-            <h1 className="section__title text-2xl font-semibold"> Edmond's Blogs! </h1>
+        <section className="blogpage section h-[1000px]" id="blogpage">
+            <h1 className="section__title mb-2 text-2xl font-semibold"> Edmond's Blogs! </h1>
             <p className="section__subtitle text-sm">
                 Welcome to my little corner on the internet :) ! Here you can find all my latest thoughts, ideas, and events going on in my life.
             </p>
